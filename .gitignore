@@ -1,0 +1,60 @@
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files (often large or sensitive)
+data/
+*.csv
+*.tsv
+*.json
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.xlsx
+*.xls
+*.db
+*.sqlite
+
+# Visuals / output (regeneratable)
+visuals/
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+
+# Environment variables / secrets
+.env
+.env.*
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
