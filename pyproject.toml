@@ -1,0 +1,13 @@
+[project]
+name = "github-insights-engine"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.9",
+    "pandas>=3.0.2",
+    "requests>=2.33.1",
+    "seaborn>=0.13.2",
+]
