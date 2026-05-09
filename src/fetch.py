@@ -1,10 +1,19 @@
 import requests
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+
+TOKEN = os.getenv("GITHUB_TOKEN")
 
 def fetch_user(username):
     url = f"https://api.github.com/users/{username}"
 
-    response = requests.get(url)
+    headers = {
+    "Authorization": f"Bearer {TOKEN}"
+    }
+
+    response = requests.get(url, headers=headers)
 
     if response.status_code != 200:
         raise Exception("User not found")
@@ -14,7 +23,11 @@ def fetch_user(username):
 def fetch_repositories(username):
     url = f"https://api.github.com/users/{username}/repos"
 
-    response = requests.get(url)
+    headers = {
+    "Authorization": f"Bearer {TOKEN}"
+    }
+
+    response = requests.get(url, headers=headers)
 
     if response.status_code != 200:
         raise Exception("Repositories not found")
